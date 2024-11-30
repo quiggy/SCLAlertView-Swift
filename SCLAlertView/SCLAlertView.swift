@@ -350,6 +350,10 @@ open class SCLAlertView: UIViewController {
         view.addSubview(baseView)
         // Base View
         baseView.frame = view.frame
+	let blurEffect = UIBlurEffect(style: .light)
+        let blurVisualEffectView = UIVisualEffectView(effect: blurEffect)
+        blurVisualEffectView.frame = view.bounds
+	baseView.addSubview(blurVisualEffectView)    
         baseView.addSubview(contentView)
         // Content View
         contentView.layer.cornerRadius = appearance.contentViewCornerRadius
